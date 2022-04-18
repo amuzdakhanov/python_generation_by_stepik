@@ -21,3 +21,10 @@ print(sum)
 
 #2-е решение
 n = int(input())
+sum = 0
+mul = 1
+for i in range(1,2):
+    for j in range(1,n+1):
+        mul=i*j*mul
+        sum = mul+sum
+print(sum)

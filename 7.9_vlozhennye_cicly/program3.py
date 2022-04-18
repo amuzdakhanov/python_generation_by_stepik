@@ -25,3 +25,16 @@ Sample Input 2:
 Sample Output 2:
 96 252
 """
+a = int(input())
+b = int(input())
+max_sum_d = 1
+max_n= 0
+for i in range(a,b+1):
+    sum_d = 0
+    for j in range(1,b+1):
+        if i % j == 0:
+            sum_d=sum_d+j
+        if sum_d >= max_sum_d:
+            max_sum_d = sum_d
+            max_n = i
+print(max_n,max_sum_d)
