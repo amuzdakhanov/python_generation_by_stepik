@@ -1,0 +1,39 @@
+"""
+На вход программе подается одна строка. Напишите программу, которая выводит:
+
+    общее количество символов в строке;
+    исходную строку повторенную 3 раза;
+    первый символ строки;
+    первые три символа строки;
+    последние три символа строки;
+    строку в обратном порядке;
+    строку с удаленным первым и последним символом.
+
+Формат входных данных
+На вход программе подается одна строка, длина которой больше 3 символов.
+
+Формат выходных данных
+Программа должна вывести данные в соответствии с условием. Каждое значение выводится на отдельной строке.
+
+Sample Input:
+abcdefghijklmnopqrstuvwxyz
+
+Sample Output:
+26
+abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+a
+abc
+xyz
+zyxwvutsrqponmlkjihgfedcba
+bcdefghijklmnopqrstuvwxy
+
+"""
+s = input()
+len_s = len(s)
+print(len_s)
+print(s*3)
+print(s[0])
+print(s[:3])
+print(s[-3:])
+print(s[::-1])
+print(s[1:-1])
