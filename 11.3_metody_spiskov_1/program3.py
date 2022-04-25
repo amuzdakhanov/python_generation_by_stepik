@@ -16,3 +16,9 @@ for i in range(1,27):
         i = i+1
     break
 print(l)
+
+###################2-е решение ##############
+l = []
+for i in range(26):
+        l.append(chr(ord('a') + i)*(i+1))
+print(l)
