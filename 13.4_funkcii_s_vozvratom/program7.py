@@ -1,7 +1,7 @@
 
 """
-На вход программе подается число nnn, а затем n строк, содержащих целые числа в порядке возрастания. 
-Из данных строк формируются списки чисел. 
+На вход программе подается число nnn, а затем n строк, содержащих целые числа в порядке возрастания.
+Из данных строк формируются списки чисел.
 Напишите программу, которая объединяет указанные списки в один отсортированный список с помощью функции quick_merge(), а затем выводит его.
 
 Формат входных данных
@@ -22,30 +22,16 @@ Sample Output 1:
 1 2 3 4 5 6 7 10 11 17
 """
 
-def quick_merge(list1, list2):
-    result = []
+def merge(list1,list2):
+    return sorted(list1+list2)
 
-    p1 = 0  # указатель на первый элемент списка list1
-    p2 = 0  # указатель на первый элемент списка list2
 
-    while p1 < len(list1) and p2 < len(list2):  # пока не закончился хотя бы один список
-        if list1[p1] <= list2[p2]:
-            result.append(list1[p1])
-            p1 += 1
-        else:
-            result.append(list2[p2])
-            p2 += 1
-
-    if p1 < len(list1):   # прицепление остатка
-        result += list1[p1:]
-    if p2 < len(list2):
-        result += list2[p2:]
-    
-    return result
-
-total_list = []
+def quick_merge(n):
+    total_list = []
+    for i in range(n):
+        num = [int(q) for q in input().split()]
+        total_list = merge(total_list,num)
+    return total_list
 n = int(input())
-for i in range(n):
-    num = [int(j) for j in input().split()]
-    total_list.sort()
 
+print(*quick_merge(n))
